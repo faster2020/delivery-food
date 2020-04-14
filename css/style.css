@@ -1,0 +1,685 @@
+/* Фиксируем размер элементов */
+* {
+  box-sizing: border-box;
+}
+
+/* Тело документа */
+body {
+  padding-top: 44px;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* Убираем обводку */
+input, button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Общий контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Шапка сайта */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Убираем лишние отступы */
+.header__logo img,
+.footer__logo img {
+  display: block;
+}
+
+.header__input-address, .restaurants__input-search {
+  padding: 8px 0 8px 33px;
+  font-family: "SFProDisplay", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #BFBFBF;
+  background: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: left 11px center;
+  border: 1px solid #D9D9D9;
+  border-radius: 2px;
+}
+
+/* Адрес доставки */
+.header__input-address {
+  flex: 0.8;
+  background-image: url("../img/home.svg");
+}
+
+/* Кнопки в шапке */
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Стандартная кнопка */
+.button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-family: "SFProDisplay", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+  border-radius: 2px;
+}
+
+/* Кнопка с изысками */
+.button-primary {
+  margin-right: 10px;
+  color: #fff;
+  background: #1890FF;
+  border: 1px solid #1890FF;
+  border-radius: 2px;
+}
+
+/* Иконка в кнопке */
+.button__icon {
+  margin-right: 5px;
+}
+
+.button__icon_right {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+/* Блок с промо и карточкам ресторанов */
+.main {
+  background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
+
+/* Промоация */
+.promo {
+  margin-top: 40px;
+  padding: 68px 70px;
+  color: #302C34;
+  background: #FFF1B8 url("../img/promo-image.png") no-repeat top right -145px / 850px;
+  border-radius: 10px;
+}
+
+/* Заголовок промоации */
+.promo__title {
+  margin: 0;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+/* Подзаголовок промоакции */
+.promo__subtitle {
+  margin-top: 15px;
+  max-width: 538px;
+  line-height: 28px;
+}
+
+/* Верхняя часть блока "Рестораны" и "Продукты" */
+.restaurants__heading, .restaurant__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 56px;
+}
+
+.restaurants__title, .restaurant__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #000000;
+}
+
+/* Поиск блюд и ресторанов */
+.restaurants__input-search {
+  width: 306px;
+  background-image: url("../img/search.svg");
+}
+
+/* Карточки ресторанов и продуктов */
+.restaurants__cards, .products__cards {
+  margin-top: 46px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Карточка ресторана */
+.restaurant__card, .product__card {
+  margin-bottom: 30px;
+  flex-basis: 31%;
+  color: #000;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* Изображение в карточке ресторана */
+.restaurant__card-img, .product__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Текст в карточке ресторана */
+.restaurant__card-text, .product__card-text {
+  padding: 20px 24px 35px;
+}
+
+/* Заглавная часть текса картрочки ресторана */
+.restaurant__card-heading, .product__card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Заголовок карточки ресторана */
+.restaurant__card-title, .product__card-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+/* Тег карточки ресторана */
+.restaurant__card-tag {
+  padding: 1px 8px;
+  font-family: "SFProDisplay", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: #262626;
+  border-radius: 2px;
+}
+
+/* Информация в карточке ресторана */
+.restaurant__card-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.restaurant__card-info_margins {
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+/* Рейтинг ресторана */
+.restaurant__card-rating {
+  margin-right: 26px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #FFC107;
+}
+
+/* Общие стили цены и категории в карточке ресторана */
+.restaurant__card-price, .restaurant__card-category {
+  font-size: 18px;
+  line-height: 32px;
+  color: #8C8C8C;
+}
+
+/* Цена в карточке ресторана */
+.restaurant__card-price, .restaurant__card-price {
+  margin-right: 10px;
+}
+
+/* Категория ресторана */
+.restaurant__card-category {
+  max-width: 140px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.restaurant__card-category_long {
+  max-width: 630px;
+}
+
+/* Псевдоэлемент "точка" после цены в карточке товара */
+.restaurant__card-price::after, .restaurant__card-price::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  width: 5px;
+  height: 5px;
+  background: #8C8C8C;
+  border-radius: 50%;
+}
+
+/* Подвал сайта */
+.footer {
+  padding: 60px 0;
+}
+
+/* Основной блок в подвале */
+.footer__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Навигационное меню */
+.footer__nav {
+  margin-left: 35px;
+  margin-right: auto;
+}
+
+/* Ссылка в навигационном меню */
+.footer__link {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 21px;
+  color: #595959;
+  text-decoration: none;
+}
+
+/* Отступы для всех ссылок, кроме последней */
+.footer__link:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* Блок ссылок на соцсети */
+.footer__social-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Отступы для всех ссылок соцсетей, кроме последней */
+.footer__social-link:not(:last-child) {
+  margin-right: 21px;
+}
+
+.product__card-ingredients {
+  font-size: 18px;
+  line-height: 21px;
+  color: #8C8C8C;
+}
+
+.product__card-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.product__card-price {
+  margin-left: 32px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.is-active {
+  display: flex;
+}
+
+.modal-dialog {
+  margin: auto;
+  padding: 40px 45px;
+  max-width: 780px;
+  width: 95%;
+  min-height: 450px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+.modal__close {
+  font-size: 36px;
+  background-color: transparent;
+  border: none;
+}
+
+.modal__body {
+  margin-bottom: 52px;
+}
+
+.product__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.product__row-title {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.product__row-price {
+  margin-left: auto;
+  margin-right: 47px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.product__row-counter-block {
+  display: flex;
+  align-items: center;
+}
+
+.product__row-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 32px;
+  font-size: 16px;
+  color: #40A9FF;
+  background-color: #fff;
+  border: 1px solid #40A9FF;
+  border-radius: 2px;
+}
+
+.product__row-counter {
+  margin: 0 10px;
+  font-family: "SFProDisplay", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-footer__price-tag {
+  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #fff;
+  background: #262626;
+  border-radius: 5px;
+}
+
+.modal-footer__buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* Адаптив под разные размеры экрана */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .promo {
+    background-size: 600px;
+    background-position: top 50px right -145px;
+  }
+
+  .restaurant__card-rating {
+    margin-right: 15px;
+  }
+
+  .restaurant__card-price, .restaurant__card-category {
+    font-size: 14px;
+  }
+
+  .restaurant__card-price_size_big, .restaurant__card-category_size_big {
+    font-size: 18px;
+  }
+
+  .product__card-title {
+    font-size: 20px;
+  }
+
+  .product__card-ingredients {
+    min-height: 65px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .promo {
+    padding: 50px;
+    background-size: 500px;
+  }
+
+  .promo__subtitle {
+    font-size: 18px;
+    max-width: 400px;
+  }
+
+  .restaurant__card, .product__card {
+    flex-basis: 49%;
+  }
+
+  .restaurant__card-category_long {
+    max-width: 400px;
+  }
+
+  .footer__link {
+    font-size: 16px;
+  }
+
+  .product__card-title {
+    font-size: 24px;
+  }
+
+  .product__card-ingredients {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+
+  .promo {
+    background-size: 400px;
+    background-position: bottom right -200px;
+  }
+
+  .promo__title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .promo__subtitle {
+    margin-top: 5px;
+  }
+
+  .restaurant__card-title, .product__card-title {
+    font-size: 20px;
+  }
+
+  .restaurant__card-rating {
+    flex-basis: 100%;
+  }
+
+  .restaurant__card-rating_basis_auto {
+    flex-basis: auto;
+  }
+
+  .restaurant__card-category {
+    max-width: 130px;
+  }
+
+  .restaurant__card-category_long {
+    max-width: 230px;
+  }
+
+  .product__card-title {
+    font-size: 19px;
+  }
+
+  .product__card-ingredients {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 578px) {
+  .container {
+    width: 90%;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header__input-address {
+    margin-top: 15px;
+    flex-basis: 100%;
+    order: 4;
+  }
+
+  .promo {
+    background-image: none;
+  }
+
+  .promo__subtitle {
+    margin-top: 10px;
+  }
+
+  .restaurants__title, .restaurant__title {
+    font-size: 24px;
+  }
+
+  .restaurant__card, .product__card {
+    flex-basis: 100%;
+  }
+
+  .restaurant__card-category_long {
+    max-width: 140px;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer__block {
+    align-items: flex-start;
+  }
+
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    order: 0;
+    margin: 0;
+  }
+
+  .footer__logo {
+    order: 1;
+  }
+
+  .footer__social-links {
+    order: 2;
+  }
+
+  /* Отступы для всех ссылок, кроме последней */
+  .footer__link:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    min-height: 40px;
+  }
+
+  .button__icon {
+    margin: 0;
+  }
+
+  .button__text {
+    display: none;
+  }
+
+  .promo {
+    padding: 20px;
+  }
+
+  .restaurants__heading, .restaurant__heading {
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .restaurants__input-search {
+    margin-top: 10px;
+    flex-basis: 100%;
+  }
+
+  .restaurant__card-info {
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+
+  .footer__block {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer__logo {
+    order: 0;
+  }
+
+  .footer__nav {
+    margin-top: 20px;
+    order: 1;
+    text-align: center;
+  }
+
+  .footer__social-links {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .restaurant__card-rating {
+    flex-basis: 100%;
+  }
+}
