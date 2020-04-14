@@ -1,15 +1,18 @@
+/* Подключение шрифта "SFProDisplay" */
 @font-face {
   font-family: "SFProDisplay";
   src: url("../fonts/SFProDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
+/* Подключение шрифта "Roboto Regular" */
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
+/* Подключение шрифта "Roboto Bold" */
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Bold.ttf") format("truetype");
