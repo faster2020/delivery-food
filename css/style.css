@@ -559,6 +559,14 @@ button {
   .product__card-ingredients {
     font-size: 16px;
   }
+
+  .product__row-title {
+    font-size: 20px;
+  }
+
+  .product__row-price {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 578px) {
@@ -623,6 +631,24 @@ button {
   .footer__link:not(:last-child) {
     margin-right: 0;
   }
+
+  .modal__title {
+    font-size: 30px;
+  }
+
+  .product__row-title {
+    font-size: 18px;
+  }
+
+  .product__row-price {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .product__row-button {
+    width: 34px;
+    height: 28px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -675,6 +701,61 @@ button {
 
   .footer__social-links {
     margin-top: 20px;
+  }
+
+  .product__row-title {
+    font-size: 16px;
+  }
+
+  .product__row-price {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .product__row-button {
+    width: 30px;
+    height: 25px;
+  }
+
+  .product__row-counter {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 12px;
+  }
+
+  .modal-footer__price-tag {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .modal__body {
+    margin-bottom: 40px;
+  }
+
+  .product__row {
+    flex-wrap: wrap;
+  }
+
+  .product__row-title {
+    flex-basis: 100%;
+  }
+
+  .modal__footer {
+    flex-wrap: wrap;
+  }
+
+  .modal-footer__price-tag {
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+  }
+
+  .modal-footer__buttons {
+    flex-basis: 100%;
+    justify-content: flex-end;
   }
 }
 
