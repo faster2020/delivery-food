@@ -46,12 +46,16 @@ button {
   font-family: "SFProDisplay", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #BFBFBF;
   background: #FFFFFF;
   background-repeat: no-repeat;
   background-position: left 11px center;
   border: 1px solid #D9D9D9;
   border-radius: 2px;
+}
+
+/* Стили для placeholder полей ввода адреса и поска по ресторанам */
+.header__input-address::placeholder, .restaurants__input-search::placeholder {
+  color: #BFBFBF;
 }
 
 /* Адрес доставки */
@@ -360,7 +364,7 @@ button {
   padding: 40px 45px;
   max-width: 780px;
   width: 95%;
-  min-height: 450px;
+  min-height: 350px;
   background: #FFFFFF;
   border-radius: 5px;
 }
@@ -699,6 +703,13 @@ button {
   /* Отступы для всех ссылок, кроме последней */
   .footer__link:not(:last-child) {
     margin-right: 0;
+  }
+
+  /* Модальное окно */
+  .modal-dialog {
+    padding: 15px 20px;
+    max-height: 90%;
+    overflow-y: scroll;
   }
 
   /* Заголовок модального окна */
