@@ -1,17 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DeliveryFood - Доставка еды на дом</title>
     <!-- Стили нормализации -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css" />
     <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animate.css" />
     <!-- Основные стили -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Нестандартные шрифты -->
-    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/fonts.css" />
   </head>
   <body>
     <!-- Общий контейнер -->
@@ -19,20 +19,33 @@
       <!-- Шапка сайта -->
       <header class="header">
         <!-- Логотип -->
-        <img class="header__logo" src="img/logo.svg" alt="Логотип">
+        <img class="header__logo" src="img/logo.svg" alt="Логотип" />
         <!-- Адрес доставки -->
-        <input class="header__input-address" type="text" placeholder="Адрес доставки">
+        <input
+          class="header__input-address"
+          type="text"
+          placeholder="Адрес доставки"
+        />
         <!-- Кнопки -->
         <div class="buttons">
+          <span class="user-name"></span>
           <!-- Кнопка "Войти" -->
-          <button class="button button-primary">
-            <img class="button__icon" src="img/user.svg" alt="Пользователь">
+          <button class="button button-primary button-auth">
+            <img class="button__icon" src="img/user.svg" alt="Пользователь" />
             <span class="button__text">Войти</span>
+          </button>
+          <button class="button button-primary button-out">
+            <!-- <img class="button__icon" src="img/logout.svg" alt="Выйти" /> -->
+            <span class="button__text">Выйти</span>
           </button>
           <!-- /.button button-primary -->
           <!-- Кнопка "Корзина" -->
-          <button class="button" id="button-cart">
-            <img class="button__icon" src="img/shopping-cart.svg" alt="Корзина">
+          <button class="button button-cart" id="button-cart">
+            <img
+              class="button__icon"
+              src="img/shopping-cart.svg"
+              alt="Корзина"
+            />
             <span class="button__text">Корзина</span>
           </button>
           <!-- /.button -->
@@ -51,12 +64,14 @@
         <section class="promo">
           <!-- Заголовок промоакции -->
           <h1 class="promo__title">
-            Онлайн-сервис <br> доставки еды на дом
+            Онлайн-сервис <br />
+            доставки еды на дом
           </h1>
           <!-- /.promo__title -->
           <!-- Подзаголовок промоакции -->
           <div class="promo__subtitle">
-            Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком
+            Блюда из любимого ресторана привезет курьер в перчатках, маске и с
+            антисептиком
           </div>
           <!-- /.promo__subtitle -->
         </section>
@@ -72,16 +87,28 @@
             </h2>
             <!-- /.restaurants__title -->
             <!-- Элемент ввода для поиска блюд и ресторанов -->
-            <input class="restaurants__input-search" type="text" placeholder="Поиск блюд и ресторанов">
+            <input
+              class="restaurants__input-search"
+              type="text"
+              placeholder="Поиск блюд и ресторанов"
+            />
           </div>
           <!-- /.restaurants__heading -->
 
           <!-- Карточки ресторанов -->
           <div class="restaurants__cards">
             <!-- Ссылка-карточка ресторана -->
-            <a class="restaurant__card wow fadeInUp" data-wow-delay="0.2s"" href="restaurant.html">
+            <a
+              class="restaurant__card wow fadeInUp"
+              data-wow-delay="0.2s"
+              href="restaurant.html"
+            >
               <!-- Фотография карточки -->
-              <img class="restaurant__card-img" src="img/pizza-plus-plus.jpg" alt="Пицца Плюс">
+              <img
+                class="restaurant__card-img"
+                src="img/pizza-plus-plus.jpg"
+                alt="Пицца Плюс"
+              />
               <!-- Текстовая часть карточки -->
               <div class="restaurant__card-text">
                 <!-- Верхняя часть текстовой части карточки -->
@@ -102,7 +129,11 @@
                 <div class="restaurant__card-info">
                   <!-- Рейтинг в карточке -->
                   <div class="restaurant__card-rating">
-                    <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг">
+                    <img
+                      class="restaurant__icon"
+                      src="img/rating.svg"
+                      alt="Рейтинг"
+                    />
                     4.5
                   </div>
                   <!-- /.restaurant__card-rating -->
@@ -122,9 +153,17 @@
             <!-- /.restaurant__card -->
 
             <!-- Ссылка-карточка ресторана -->
-            <a class="restaurant__card wow fadeInUp" data-wow-delay="0.4s" href="restaurant.html">
+            <a
+              class="restaurant__card wow fadeInUp"
+              data-wow-delay="0.4s"
+              href="restaurant.html"
+            >
               <!-- Фотография карточки -->
-              <img class="restaurant__card-img" src="img/tanuki.jpg" alt="Тануки">
+              <img
+                class="restaurant__card-img"
+                src="img/tanuki.jpg"
+                alt="Тануки"
+              />
               <!-- Текстовая часть карточки -->
               <div class="restaurant__card-text">
                 <!-- Верхняя часть текстовой части карточки -->
@@ -145,7 +184,11 @@
                 <div class="restaurant__card-info">
                   <!-- Рейтинг в карточке -->
                   <div class="restaurant__card-rating">
-                    <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг">
+                    <img
+                      class="restaurant__icon"
+                      src="img/rating.svg"
+                      alt="Рейтинг"
+                    />
                     4.7
                   </div>
                   <!-- /.restaurant__card-rating -->
@@ -165,9 +208,17 @@
             <!-- /.restaurant__card -->
 
             <!-- Ссылка-карточка ресторана -->
-            <a class="restaurant__card wow fadeInUp" data-wow-delay="0.6s" href="restaurant.html">
+            <a
+              class="restaurant__card wow fadeInUp"
+              data-wow-delay="0.6s"
+              href="restaurant.html"
+            >
               <!-- Фотография карточки -->
-              <img class="restaurant__card-img" src="img/foodband.jpg" alt="FoodBand">
+              <img
+                class="restaurant__card-img"
+                src="img/foodband.jpg"
+                alt="FoodBand"
+              />
               <!-- Текстовая часть карточки -->
               <div class="restaurant__card-text">
                 <!-- Верхняя часть текстовой части карточки -->
@@ -188,7 +239,11 @@
                 <div class="restaurant__card-info">
                   <!-- Рейтинг в карточке -->
                   <div class="restaurant__card-rating">
-                    <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг">
+                    <img
+                      class="restaurant__icon"
+                      src="img/rating.svg"
+                      alt="Рейтинг"
+                    />
                     4.6
                   </div>
                   <!-- /.restaurant__card-rating -->
@@ -208,9 +263,17 @@
             <!-- /.restaurant__card -->
 
             <!-- Ссылка-карточка ресторана -->
-            <a class="restaurant__card wow fadeInUp" data-wow-delay="0.2s" href="restaurant.html">
+            <a
+              class="restaurant__card wow fadeInUp"
+              data-wow-delay="0.2s"
+              href="restaurant.html"
+            >
               <!-- Фотография карточки -->
-              <img class="restaurant__card-img" src="img/sushi-zhadinu.jpg" alt="Суши-Жадину">
+              <img
+                class="restaurant__card-img"
+                src="img/sushi-zhadinu.jpg"
+                alt="Суши-Жадину"
+              />
               <!-- Текстовая часть карточки -->
               <div class="restaurant__card-text">
                 <!-- Верхняя часть текстовой части карточки -->
@@ -231,7 +294,11 @@
                 <div class="restaurant__card-info">
                   <!-- Рейтинг в карточке -->
                   <div class="restaurant__card-rating">
-                    <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг">
+                    <img
+                      class="restaurant__icon"
+                      src="img/rating.svg"
+                      alt="Рейтинг"
+                    />
                     4.2
                   </div>
                   <!-- /.restaurant__card-rating -->
@@ -251,9 +318,17 @@
             <!-- /.restaurant__card -->
 
             <!-- Ссылка-карточка ресторана -->
-            <a class="restaurant__card wow fadeInUp" data-wow-delay="0.4s" href="restaurant.html">
+            <a
+              class="restaurant__card wow fadeInUp"
+              data-wow-delay="0.4s"
+              href="restaurant.html"
+            >
               <!-- Фотография карточки -->
-              <img class="restaurant__card-img" src="img/tochka-edi.jpg" alt="Точка еды">
+              <img
+                class="restaurant__card-img"
+                src="img/tochka-edi.jpg"
+                alt="Точка еды"
+              />
               <!-- Текстовая часть карточки -->
               <div class="restaurant__card-text">
                 <!-- Верхняя часть текстовой части карточки -->
@@ -274,7 +349,11 @@
                 <div class="restaurant__card-info">
                   <!-- Рейтинг в карточке -->
                   <div class="restaurant__card-rating">
-                    <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг">
+                    <img
+                      class="restaurant__icon"
+                      src="img/rating.svg"
+                      alt="Рейтинг"
+                    />
                     4.8
                   </div>
                   <!-- /.restaurant__card-rating -->
@@ -294,9 +373,17 @@
             <!-- /.restaurant__card -->
 
             <!-- Ссылка-карточка ресторана -->
-            <a class="restaurant__card wow fadeInUp" data-wow-delay="0.6s" href="restaurant.html">
+            <a
+              class="restaurant__card wow fadeInUp"
+              data-wow-delay="0.6s"
+              href="restaurant.html"
+            >
               <!-- Фотография карточки -->
-              <img class="restaurant__card-img" src="img/pizza-burger.jpg" alt="Пицца & Бургер>">
+              <img
+                class="restaurant__card-img"
+                src="img/pizza-burger.jpg"
+                alt="Пицца & Бургер>"
+              />
               <!-- Текстовая часть карточки -->
               <div class="restaurant__card-text">
                 <!-- Верхняя часть текстовой части карточки -->
@@ -317,7 +404,11 @@
                 <div class="restaurant__card-info">
                   <!-- Рейтинг в карточке -->
                   <div class="restaurant__card-rating">
-                    <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг">
+                    <img
+                      class="restaurant__icon"
+                      src="img/rating.svg"
+                      alt="Рейтинг"
+                    />
                     5.0
                   </div>
                   <!-- /.restaurant__card-rating -->
@@ -351,7 +442,7 @@
         <!-- Основной блок подвала сайта -->
         <div class="footer__block">
           <!-- Логотип -->
-          <img class="footer__logo" src="img/logo.svg" alt="Логотип">
+          <img class="footer__logo" src="img/logo.svg" alt="Логотип" />
           <!-- Навигационные ссылки -->
           <nav class="footer__nav">
             <a href="#" class="footer__link">Ресторанам</a>
@@ -362,9 +453,15 @@
           <!-- /.footer__nav -->
           <!-- Ссылки социальные сети -->
           <div class="footer__social-links">
-            <a href="#" class="footer__social-link"><img src="img/instagram.svg" alt="Instagram"></a>
-            <a href="#" class="footer__social-link"><img src="img/fb.svg" alt="Facebook"></a>
-            <a href="#" class="footer__social-link"><img src="img/vk.svg" alt="ВКонтакте"></a>
+            <a href="#" class="footer__social-link"
+              ><img src="img/instagram.svg" alt="Instagram"
+            /></a>
+            <a href="#" class="footer__social-link"
+              ><img src="img/fb.svg" alt="Facebook"
+            /></a>
+            <a href="#" class="footer__social-link"
+              ><img src="img/vk.svg" alt="ВКонтакте"
+            /></a>
           </div>
           <!-- /.footer__social-links -->
         </div>
@@ -375,9 +472,9 @@
     <!-- /.footer -->
 
     <!-- Подложка модального окна -->
-    <div class="modal">
+    <div class="modal modal-cart">
       <!-- Модальное окно -->
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-cart">
         <!-- Верхняя часть окна -->
         <div class="modal__header">
           <!-- Загололвок окна -->
@@ -513,6 +610,56 @@
       <!-- /.modal__dialog -->
     </div>
     <!-- /.modal -->
+
+    <div class="modal modal-auth">
+      <div class="modal-dialog modal-dialog-auth">
+        <div class="modal__header">
+          <div class="modal__title">
+            Авторизация
+          </div>
+          <button class="modal-auth__close">
+            &times;
+          </button>
+          <!-- /.modal__close -->
+        </div>
+        <!-- /.modal__header -->
+        <div class="modal-auth__body">
+          <form id="logInForm">
+            <fieldset class="form__body">
+              <label class="label-auth">
+                <span>Логин</span>
+                <input id="login" type="text" />
+              </label>
+              <label class="label-auth">
+                <span>Пароль</span>
+                <input id="password" type="password" />
+              </label>
+              <!-- /.label-auth -->
+            </fieldset>
+            <!-- Нижняя часть окна -->
+            <div class="modal__footer modal__footer-auth">
+              <!-- Кнопки нижней части окна -->
+              <div class="modal-footer__buttons">
+                <!-- Кнопка "Оформить заказ" -->
+                <button class="button button-primary button-auth" type="submit">
+                  Войти
+                </button>
+                <!-- Кнопка "Отмена" -->
+                <button class="button button-cancel-auth" type="button">
+                  Отмена
+                </button>
+              </div>
+              <!-- /.modal-footer__buttons -->
+            </div>
+            <!-- /.modal__footer -->
+          </form>
+          <!-- /.logInForm -->
+        </div>
+        <!-- /.modal__body -->
+      </div>
+      <!-- /.modal-dialog modal-dialog-auth -->
+    </div>
+    <!-- /.modal modal-auth -->
 
     <!-- Скрипт WOW.js -->
     <script src="js/wow.min.js"></script>

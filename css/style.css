@@ -6,13 +6,14 @@
 /* Тело документа */
 body {
   padding-top: 44px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 400;
 }
 
 /* Убираем обводку */
-input, button {
+input,
+button {
   outline: none;
 }
 
@@ -41,27 +42,29 @@ button {
 }
 
 /* Поля ввода адреса и поиска по ресторанам */
-.header__input-address, .restaurants__input-search {
+.header__input-address,
+.restaurants__input-search {
   padding: 8px 0 8px 33px;
-  font-family: "SFProDisplay", sans-serif;
+  font-family: 'SFProDisplay', sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background: #FFFFFF;
+  background: #ffffff;
   background-repeat: no-repeat;
   background-position: left 11px center;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 2px;
 }
 
 /* Стили для placeholder полей ввода адреса и поска по ресторанам */
-.header__input-address::placeholder, .restaurants__input-search::placeholder {
-  color: #BFBFBF;
+.header__input-address::placeholder,
+.restaurants__input-search::placeholder {
+  color: #bfbfbf;
 }
 
 /* Адрес доставки */
 .header__input-address {
   flex: 0.8;
-  background-image: url("../img/home.svg");
+  background-image: url('../img/home.svg');
 }
 
 /* Кнопки в шапке и модальном окне "Корзина" */
@@ -75,12 +78,12 @@ button {
   display: flex;
   align-items: center;
   padding: 8px 16px;
-  font-family: "SFProDisplay", sans-serif;
+  font-family: 'SFProDisplay', sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #595959;
-  background: #FFFFFF;
-  border: 1px solid #D9D9D9;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
   border-radius: 2px;
 }
@@ -89,14 +92,16 @@ button {
 .button-primary {
   margin-right: 10px;
   color: #fff;
-  background: #1890FF;
-  border: 1px solid #1890FF;
+  background: #1890ff;
+  border: 1px solid #1890ff;
   border-radius: 2px;
 }
 
 /* Иконка в кнопке */
 .button__icon {
   margin-right: 5px;
+  width: 14px;
+  height: 14px;
 }
 
 /* Иконка справа */
@@ -107,15 +112,20 @@ button {
 
 /* Блок с промо и карточкам ресторанов */
 .main {
-  background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 0) 1.04%,
+    #f5f5f5 100%
+  );
 }
 
 /* Промоация */
 .promo {
   margin-top: 40px;
   padding: 68px 70px;
-  color: #302C34;
-  background: #FFF1B8 url("../img/promo-image.png") no-repeat top right -145px / 850px;
+  color: #302c34;
+  background: #fff1b8 url('../img/promo-image.png') no-repeat top right -145px /
+    850px;
   border-radius: 10px;
 }
 
@@ -135,7 +145,8 @@ button {
 }
 
 /* Верхняя часть блока "Рестораны" и "Продукты" */
-.restaurants__heading, .restaurant__heading {
+.restaurants__heading,
+.restaurant__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,7 +154,8 @@ button {
 }
 
 /* Заголовок ресторанов и ресторана */
-.restaurants__title, .restaurant__title {
+.restaurants__title,
+.restaurant__title {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
@@ -154,11 +166,12 @@ button {
 /* Поиск блюд и ресторанов */
 .restaurants__input-search {
   width: 306px;
-  background-image: url("../img/search.svg");
+  background-image: url('../img/search.svg');
 }
 
 /* Карточки ресторанов и продуктов */
-.restaurants__cards, .products__cards {
+.restaurants__cards,
+.products__cards {
   margin-top: 46px;
   display: flex;
   flex-wrap: wrap;
@@ -167,11 +180,12 @@ button {
 }
 
 /* Карточка ресторана */
-.restaurant__card, .product__card {
+.restaurant__card,
+.product__card {
   margin-bottom: 30px;
   flex-basis: 31%;
   color: #000;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 7px;
   text-decoration: none;
@@ -179,7 +193,8 @@ button {
 }
 
 /* Изображение в карточке ресторана */
-.restaurant__card-img, .product__card-img {
+.restaurant__card-img,
+.product__card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -187,12 +202,14 @@ button {
 }
 
 /* Текст в карточке ресторана */
-.restaurant__card-text, .product__card-text {
+.restaurant__card-text,
+.product__card-text {
   padding: 20px 24px 35px;
 }
 
 /* Заглавная часть текса картрочки ресторана */
-.restaurant__card-heading, .product__card-heading {
+.restaurant__card-heading,
+.product__card-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -200,7 +217,8 @@ button {
 }
 
 /* Заголовок карточки ресторана */
-.restaurant__card-title, .product__card-title {
+.restaurant__card-title,
+.product__card-title {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
@@ -210,10 +228,10 @@ button {
 /* Тег карточки ресторана */
 .restaurant__card-tag {
   padding: 1px 8px;
-  font-family: "SFProDisplay", sans-serif;
+  font-family: 'SFProDisplay', sans-serif;
   font-size: 12px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #262626;
   border-radius: 2px;
 }
@@ -237,14 +255,15 @@ button {
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
-  color: #FFC107;
+  color: #ffc107;
 }
 
 /* Общие стили цены и категории в карточке ресторана */
-.restaurant__card-price, .restaurant__card-category {
+.restaurant__card-price,
+.restaurant__card-category {
   font-size: 18px;
   line-height: 32px;
-  color: #8C8C8C;
+  color: #8c8c8c;
 }
 
 /* Цена в карточке ресторана */
@@ -266,14 +285,15 @@ button {
 }
 
 /* Псевдоэлемент "точка" после цены в карточке товара */
-.restaurant__card-price::after, .restaurant__card-price::after {
-  content: "";
+.restaurant__card-price::after,
+.restaurant__card-price::after {
+  content: '';
   display: inline-block;
   vertical-align: middle;
   margin-left: 10px;
   width: 5px;
   height: 5px;
-  background: #8C8C8C;
+  background: #8c8c8c;
   border-radius: 50%;
 }
 
@@ -324,7 +344,7 @@ button {
 .product__card-ingredients {
   font-size: 18px;
   line-height: 21px;
-  color: #8C8C8C;
+  color: #8c8c8c;
 }
 
 /* Кнопки в карточке продукта */
@@ -365,7 +385,7 @@ button {
   max-width: 780px;
   width: 95%;
   min-height: 350px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 5px;
 }
 
@@ -404,7 +424,7 @@ button {
   align-items: center;
   margin-bottom: 15px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 /* Заголовок строки продукта */
@@ -436,16 +456,16 @@ button {
   width: 39px;
   height: 32px;
   font-size: 16px;
-  color: #40A9FF;
+  color: #40a9ff;
   background-color: #fff;
-  border: 1px solid #40A9FF;
+  border: 1px solid #40a9ff;
   border-radius: 2px;
 }
 
 /* Счётчик в строке продукта */
 .product__row-counter {
   margin: 0 10px;
-  font-family: "SFProDisplay", sans-serif;
+  font-family: 'SFProDisplay', sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
@@ -474,6 +494,62 @@ button {
   align-items: center;
 }
 
+/* Стили модального окна авторизации */
+.modal-dialog-auth {
+  max-width: 500px;
+  min-height: 300px;
+}
+
+/* Кнопка закрытия "Х" модального окна */
+.modal-auth__close {
+  font-size: 36px;
+  background-color: transparent;
+  border: none;
+}
+
+.form__body {
+  margin: 0;
+  margin-bottom: 52px;
+  padding: 0;
+  font-size: 22px;
+  border: 0;
+}
+
+.label-auth {
+  display: block;
+  margin: 30px 0;
+}
+
+.label-auth span {
+  display: inline-block;
+  min-width: 90px;
+}
+
+.label-auth input {
+  width: 310px;
+}
+
+/* Нижняя часть модального окна */
+.modal__footer-auth {
+  justify-content: flex-end;
+}
+
+.button-cart {
+  display: none;
+}
+
+.user-name {
+  display: none;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+.button-out {
+  display: none;
+}
+
 /* Адаптив под разные размеры экрана */
 /* Адаптив под экраны шириной <= 1200px */
 @media (max-width: 1200px) {
@@ -493,12 +569,14 @@ button {
   }
 
   /* Общие стили цены и категории в карточке ресторана */
-  .restaurant__card-price, .restaurant__card-category {
+  .restaurant__card-price,
+  .restaurant__card-category {
     font-size: 14px;
   }
 
   /* Увеличенные цены и категории в карточке ресторана */
-  .restaurant__card-price_size_big, .restaurant__card-category_size_big {
+  .restaurant__card-price_size_big,
+  .restaurant__card-category_size_big {
     font-size: 18px;
   }
 
@@ -533,7 +611,8 @@ button {
   }
 
   /* Стили карточки ресторана и продукта */
-  .restaurant__card, .product__card {
+  .restaurant__card,
+  .product__card {
     flex-basis: 49%;
   }
 
@@ -583,7 +662,8 @@ button {
   }
 
   /* Стили карточки ресторана и продукта */
-  .restaurant__card-title, .product__card-title {
+  .restaurant__card-title,
+  .product__card-title {
     font-size: 20px;
   }
 
@@ -658,12 +738,14 @@ button {
   }
 
   /* Заголовок ресторанов и ресторана */
-  .restaurants__title, .restaurant__title {
+  .restaurants__title,
+  .restaurant__title {
     font-size: 24px;
   }
 
   /* Карточка ресторана и продукта */
-  .restaurant__card, .product__card {
+  .restaurant__card,
+  .product__card {
     flex-basis: 100%;
   }
 
@@ -758,7 +840,8 @@ button {
   }
 
   /* Верхняя часть ресторанов и ресторана */
-  .restaurants__heading, .restaurant__heading {
+  .restaurants__heading,
+  .restaurant__heading {
     flex-wrap: wrap;
     margin-top: 40px;
   }
