@@ -19,13 +19,9 @@
       <!-- Шапка сайта -->
       <header class="header">
         <!-- Логотип -->
-        <img class="header__logo" src="img/logo.svg" alt="Логотип" />
+        <a class="header__logo" href="index.html"><img src="img/logo.svg" alt="Логотип" /></a>
         <!-- Адрес доставки -->
-        <input
-          class="header__input-address"
-          type="text"
-          placeholder="Адрес доставки"
-        />
+        <input class="header__input-address" type="text" placeholder="Адрес доставки" />
         <!-- Кнопки -->
         <div class="buttons">
           <span class="user-name"></span>
@@ -40,12 +36,8 @@
           </button>
           <!-- /.button button-primary -->
           <!-- Кнопка "Корзина" -->
-          <button class="button button-cart" id="button-cart">
-            <img
-              class="button__icon"
-              src="img/shopping-cart.svg"
-              alt="Корзина"
-            />
+          <button class="button button-cart">
+            <img class="button__icon" src="img/shopping-cart.svg" alt="Корзина" />
             <span class="button__text">Корзина</span>
           </button>
           <!-- /.button -->
@@ -60,22 +52,24 @@
     <main class="main">
       <!-- Общий контейнер -->
       <div class="container">
-        <!-- Промоакция -->
-        <section class="promo">
-          <!-- Заголовок промоакции -->
-          <h1 class="promo__title">
-            Онлайн-сервис <br />
-            доставки еды на дом
-          </h1>
-          <!-- /.promo__title -->
-          <!-- Подзаголовок промоакции -->
-          <div class="promo__subtitle">
-            Блюда из любимого ресторана привезет курьер в перчатках, маске и с
-            антисептиком
-          </div>
-          <!-- /.promo__subtitle -->
-        </section>
-        <!-- /.promo -->
+        <div class="container-promo">
+          <!-- Промоакция -->
+          <section class="promo">
+            <!-- Заголовок промоакции -->
+            <h1 class="promo__title">
+              Онлайн-сервис <br />
+              доставки еды на дом
+            </h1>
+            <!-- /.promo__title -->
+            <!-- Подзаголовок промоакции -->
+            <div class="promo__subtitle">
+              Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком
+            </div>
+            <!-- /.promo__subtitle -->
+          </section>
+          <!-- /.promo -->
+        </div>
+        <!-- /.container-promo -->
 
         <!-- Рестораны -->
         <section class="restaurants">
@@ -87,349 +81,51 @@
             </h2>
             <!-- /.restaurants__title -->
             <!-- Элемент ввода для поиска блюд и ресторанов -->
-            <input
-              class="restaurants__input-search"
-              type="text"
-              placeholder="Поиск блюд и ресторанов"
-            />
+            <input class="restaurants__input-search" type="text" placeholder="Поиск блюд и ресторанов" />
           </div>
           <!-- /.restaurants__heading -->
 
           <!-- Карточки ресторанов -->
-          <div class="restaurants__cards">
-            <!-- Ссылка-карточка ресторана -->
-            <a
-              class="restaurant__card wow fadeInUp"
-              data-wow-delay="0.2s"
-              href="restaurant.html"
-            >
-              <!-- Фотография карточки -->
-              <img
-                class="restaurant__card-img"
-                src="img/pizza-plus-plus.jpg"
-                alt="Пицца Плюс"
-              />
-              <!-- Текстовая часть карточки -->
-              <div class="restaurant__card-text">
-                <!-- Верхняя часть текстовой части карточки -->
-                <div class="restaurant__card-heading">
-                  <!-- Заголовок карточки -->
-                  <h3 class="restaurant__card-title">
-                    Пицца++
-                  </h3>
-                  <!-- /.restaurant__card-title -->
-                  <!-- Тег или среднее время ожидания заказа -->
-                  <div class="restaurant__card-tag">
-                    50 мин
-                  </div>
-                  <!-- /.restaurant__card-tag -->
-                </div>
-                <!-- /.restaurant__card-heading -->
-                <!-- Информация карточки -->
-                <div class="restaurant__card-info">
-                  <!-- Рейтинг в карточке -->
-                  <div class="restaurant__card-rating">
-                    <img
-                      class="restaurant__icon"
-                      src="img/rating.svg"
-                      alt="Рейтинг"
-                    />
-                    4.5
-                  </div>
-                  <!-- /.restaurant__card-rating -->
-                  <!-- Цена в карточке -->
-                  <div class="restaurant__card-price">От 900 ₽</div>
-                  <!-- /.restaurant__card-price -->
-                  <!-- Категория в карточке-->
-                  <div class="restaurant__card-category">
-                    Пицца
-                  </div>
-                  <!-- /.restaurant__card-category -->
-                </div>
-                <!-- /.restaurant__card-info -->
-              </div>
-              <!-- /.restaurant__card-text -->
-            </a>
-            <!-- /.restaurant__card -->
-
-            <!-- Ссылка-карточка ресторана -->
-            <a
-              class="restaurant__card wow fadeInUp"
-              data-wow-delay="0.4s"
-              href="restaurant.html"
-            >
-              <!-- Фотография карточки -->
-              <img
-                class="restaurant__card-img"
-                src="img/tanuki.jpg"
-                alt="Тануки"
-              />
-              <!-- Текстовая часть карточки -->
-              <div class="restaurant__card-text">
-                <!-- Верхняя часть текстовой части карточки -->
-                <div class="restaurant__card-heading">
-                  <!-- Заголовок карточки -->
-                  <h3 class="restaurant__card-title">
-                    ТаНуки
-                  </h3>
-                  <!-- /.restaurant__card-title -->
-                  <!-- Тег или среднее время ожидания заказа -->
-                  <div class="restaurant__card-tag">
-                    20 мин
-                  </div>
-                  <!-- /.restaurant__card-tag -->
-                </div>
-                <!-- /.restaurant__card-heading -->
-                <!-- Информация карточки -->
-                <div class="restaurant__card-info">
-                  <!-- Рейтинг в карточке -->
-                  <div class="restaurant__card-rating">
-                    <img
-                      class="restaurant__icon"
-                      src="img/rating.svg"
-                      alt="Рейтинг"
-                    />
-                    4.7
-                  </div>
-                  <!-- /.restaurant__card-rating -->
-                  <!-- Цена в карточке -->
-                  <div class="restaurant__card-price">От 1 200 ₽</div>
-                  <!-- /.restaurant__card-price -->
-                  <!-- Категория в карточке-->
-                  <div class="restaurant__card-category">
-                    Суши, роллы
-                  </div>
-                  <!-- /.restaurant__card-category -->
-                </div>
-                <!-- /.restaurant__card-info -->
-              </div>
-              <!-- /.restaurant__card-text -->
-            </a>
-            <!-- /.restaurant__card -->
-
-            <!-- Ссылка-карточка ресторана -->
-            <a
-              class="restaurant__card wow fadeInUp"
-              data-wow-delay="0.6s"
-              href="restaurant.html"
-            >
-              <!-- Фотография карточки -->
-              <img
-                class="restaurant__card-img"
-                src="img/foodband.jpg"
-                alt="FoodBand"
-              />
-              <!-- Текстовая часть карточки -->
-              <div class="restaurant__card-text">
-                <!-- Верхняя часть текстовой части карточки -->
-                <div class="restaurant__card-heading">
-                  <!-- Заголовок карточки -->
-                  <h3 class="restaurant__card-title">
-                    FoodBand
-                  </h3>
-                  <!-- /.restaurant__card-title -->
-                  <!-- Тег или среднее время ожидания заказа -->
-                  <div class="restaurant__card-tag">
-                    40 мин
-                  </div>
-                  <!-- /.restaurant__card-tag -->
-                </div>
-                <!-- /.restaurant__card-heading -->
-                <!-- Информация карточки -->
-                <div class="restaurant__card-info">
-                  <!-- Рейтинг в карточке -->
-                  <div class="restaurant__card-rating">
-                    <img
-                      class="restaurant__icon"
-                      src="img/rating.svg"
-                      alt="Рейтинг"
-                    />
-                    4.6
-                  </div>
-                  <!-- /.restaurant__card-rating -->
-                  <!-- Цена в карточке -->
-                  <div class="restaurant__card-price">От 800 ₽</div>
-                  <!-- /.restaurant__card-price -->
-                  <!-- Категория в карточке-->
-                  <div class="restaurant__card-category">
-                    Пицца
-                  </div>
-                  <!-- /.restaurant__card-category -->
-                </div>
-                <!-- /.restaurant__card-info -->
-              </div>
-              <!-- /.restaurant__card-text -->
-            </a>
-            <!-- /.restaurant__card -->
-
-            <!-- Ссылка-карточка ресторана -->
-            <a
-              class="restaurant__card wow fadeInUp"
-              data-wow-delay="0.2s"
-              href="restaurant.html"
-            >
-              <!-- Фотография карточки -->
-              <img
-                class="restaurant__card-img"
-                src="img/sushi-zhadinu.jpg"
-                alt="Суши-Жадину"
-              />
-              <!-- Текстовая часть карточки -->
-              <div class="restaurant__card-text">
-                <!-- Верхняя часть текстовой части карточки -->
-                <div class="restaurant__card-heading">
-                  <!-- Заголовок карточки -->
-                  <h3 class="restaurant__card-title">
-                    Суши-Жадину
-                  </h3>
-                  <!-- /.restaurant__card-title -->
-                  <!-- Тег или среднее время ожидания заказа -->
-                  <div class="restaurant__card-tag">
-                    30 мин
-                  </div>
-                  <!-- /.restaurant__card-tag -->
-                </div>
-                <!-- /.restaurant__card-heading -->
-                <!-- Информация карточки -->
-                <div class="restaurant__card-info">
-                  <!-- Рейтинг в карточке -->
-                  <div class="restaurant__card-rating">
-                    <img
-                      class="restaurant__icon"
-                      src="img/rating.svg"
-                      alt="Рейтинг"
-                    />
-                    4.2
-                  </div>
-                  <!-- /.restaurant__card-rating -->
-                  <!-- Цена в карточке -->
-                  <div class="restaurant__card-price">От 400 ₽</div>
-                  <!-- /.restaurant__card-price -->
-                  <!-- Категория в карточке-->
-                  <div class="restaurant__card-category">
-                    Суши
-                  </div>
-                  <!-- /.restaurant__card-category -->
-                </div>
-                <!-- /.restaurant__card-info -->
-              </div>
-              <!-- /.restaurant__card-text -->
-            </a>
-            <!-- /.restaurant__card -->
-
-            <!-- Ссылка-карточка ресторана -->
-            <a
-              class="restaurant__card wow fadeInUp"
-              data-wow-delay="0.4s"
-              href="restaurant.html"
-            >
-              <!-- Фотография карточки -->
-              <img
-                class="restaurant__card-img"
-                src="img/tochka-edi.jpg"
-                alt="Точка еды"
-              />
-              <!-- Текстовая часть карточки -->
-              <div class="restaurant__card-text">
-                <!-- Верхняя часть текстовой части карточки -->
-                <div class="restaurant__card-heading">
-                  <!-- Заголовок карточки -->
-                  <h3 class="restaurant__card-title">
-                    Точка еды
-                  </h3>
-                  <!-- /.restaurant__card-title -->
-                  <!-- Тег или среднее время ожидания заказа -->
-                  <div class="restaurant__card-tag">
-                    25 мин
-                  </div>
-                  <!-- /.restaurant__card-tag -->
-                </div>
-                <!-- /.restaurant__card-heading -->
-                <!-- Информация карточки -->
-                <div class="restaurant__card-info">
-                  <!-- Рейтинг в карточке -->
-                  <div class="restaurant__card-rating">
-                    <img
-                      class="restaurant__icon"
-                      src="img/rating.svg"
-                      alt="Рейтинг"
-                    />
-                    4.8
-                  </div>
-                  <!-- /.restaurant__card-rating -->
-                  <!-- Цена в карточке -->
-                  <div class="restaurant__card-price">От 1 000 ₽</div>
-                  <!-- /.restaurant__card-price -->
-                  <!-- Категория в карточке-->
-                  <div class="restaurant__card-category">
-                    Русская кухня, суши и роллы
-                  </div>
-                  <!-- /.restaurant__card-category -->
-                </div>
-                <!-- /.restaurant__card-info -->
-              </div>
-              <!-- /.restaurant__card-text -->
-            </a>
-            <!-- /.restaurant__card -->
-
-            <!-- Ссылка-карточка ресторана -->
-            <a
-              class="restaurant__card wow fadeInUp"
-              data-wow-delay="0.6s"
-              href="restaurant.html"
-            >
-              <!-- Фотография карточки -->
-              <img
-                class="restaurant__card-img"
-                src="img/pizza-burger.jpg"
-                alt="Пицца & Бургер>"
-              />
-              <!-- Текстовая часть карточки -->
-              <div class="restaurant__card-text">
-                <!-- Верхняя часть текстовой части карточки -->
-                <div class="restaurant__card-heading">
-                  <!-- Заголовок карточки -->
-                  <h3 class="restaurant__card-title">
-                    Пицца || Бургер
-                  </h3>
-                  <!-- /.restaurant__card-title -->
-                  <!-- Тег или среднее время ожидания заказа -->
-                  <div class="restaurant__card-tag">
-                    45 мин
-                  </div>
-                  <!-- /.restaurant__card-tag -->
-                </div>
-                <!-- /.restaurant__card-heading -->
-                <!-- Информация карточки -->
-                <div class="restaurant__card-info">
-                  <!-- Рейтинг в карточке -->
-                  <div class="restaurant__card-rating">
-                    <img
-                      class="restaurant__icon"
-                      src="img/rating.svg"
-                      alt="Рейтинг"
-                    />
-                    5.0
-                  </div>
-                  <!-- /.restaurant__card-rating -->
-                  <!-- Цена в карточке -->
-                  <div class="restaurant__card-price">От 450 ₽</div>
-                  <!-- /.restaurant__card-price -->
-                  <!-- Категория в карточке-->
-                  <div class="restaurant__card-category">
-                    Пицца
-                  </div>
-                  <!-- /.restaurant__card-category -->
-                </div>
-                <!-- /.restaurant__card-info -->
-              </div>
-              <!-- /.restaurant__card-text -->
-            </a>
-            <!-- /.restaurant__card -->
-          </div>
+          <div class="restaurants__cards"></div>
           <!-- /.restaurants__cards -->
         </section>
         <!-- /.restaurants -->
+
+        <!-- Продукты -->
+        <section class="products hide">
+          <!-- Верхняя часть блока продуктов -->
+          <div class="restaurant__heading">
+            <!-- Заголовок ресторана -->
+            <h2 class="restaurant__title">
+              ТаНуки
+            </h2>
+            <!-- /.restaurant__title -->
+            <!-- Информация о ресторане -->
+            <div class="restaurant__card-info restaurant__card-info_margins">
+              <!-- Рейтинг ресторана -->
+              <div class="restaurant__card-rating restaurant__card-rating_basis_auto">
+                <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг" />
+                4.7
+              </div>
+              <!-- /.restaurant__card-rating restaurant__card-rating_basis_auto -->
+              <!-- Начальная цена в ресторане -->
+              <div class="restaurant__card-price restaurant__card-price_size_big">От 1 200 ₽</div>
+              <!-- /.restaurant__card-price restaurant__card-price_size_big -->
+              <!-- Категория ресторана -->
+              <div class="restaurant__card-category restaurant__card-category_size_big restaurant__card-category_long">
+                Суши, роллы, русская, кавказская, узбекская, туркменская, азербайджанская, иранская, армянская кухни
+              </div>
+              <!-- /.restaurant__card-category restaurant__card-category_size_big -->
+            </div>
+            <!-- /.product__card-info -->
+          </div>
+          <!-- /.restaurant__heading -->
+
+          <!-- Карточки продуктов -->
+          <div class="products__cards"></div>
+          <!-- /.product__cards -->
+        </section>
+        <!-- /.products -->
       </div>
       <!-- /.container -->
     </main>
@@ -453,15 +149,9 @@
           <!-- /.footer__nav -->
           <!-- Ссылки социальные сети -->
           <div class="footer__social-links">
-            <a href="#" class="footer__social-link"
-              ><img src="img/instagram.svg" alt="Instagram"
-            /></a>
-            <a href="#" class="footer__social-link"
-              ><img src="img/fb.svg" alt="Facebook"
-            /></a>
-            <a href="#" class="footer__social-link"
-              ><img src="img/vk.svg" alt="ВКонтакте"
-            /></a>
+            <a href="#" class="footer__social-link"><img src="img/instagram.svg" alt="Instagram" /></a>
+            <a href="#" class="footer__social-link"><img src="img/fb.svg" alt="Facebook" /></a>
+            <a href="#" class="footer__social-link"><img src="img/vk.svg" alt="ВКонтакте" /></a>
           </div>
           <!-- /.footer__social-links -->
         </div>
@@ -483,7 +173,7 @@
           </h3>
           <!-- /.modal__title -->
           <!-- Кнопка закрытия окна -->
-          <button class="modal__close">
+          <button class="modal-cart__close">
             &times;
           </button>
           <!-- /.modal__close -->
@@ -601,7 +291,7 @@
             <!-- Кнопка "Оформить заказ" -->
             <button class="button button-primary">Оформить заказ</button>
             <!-- Кнопка "Отмена" -->
-            <button class="button" id="button-cancel">Отмена</button>
+            <button class="button button-cancel-cart">Отмена</button>
           </div>
           <!-- /.modal-footer__buttons -->
         </div>
@@ -665,6 +355,5 @@
     <script src="js/wow.min.js"></script>
     <!-- Основной скрипт -->
     <script src="js/main.js"></script>
-    <!-- <script src="./js/recursion.js"></script> -->
   </body>
 </html>
