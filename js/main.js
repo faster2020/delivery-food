@@ -44,13 +44,29 @@ const buttonOut = document.querySelector('.button-out');
 let login = localStorage.getItem('myDelivery');
 console.log(login);
 
+// localStorage.setItem('test', [{ a: 4 }, 2, 3]);
+localStorage.setItem('test', { a: 2, b: 4 });
+console.log(localStorage.getItem('test'));
+
+function cleanLogInForm() {
+  loginInput.style.borderColor = '';
+  loginInput.placeholder = '';
+  logInForm.reset();
+}
+
 function toggleModalAuth() {
+  cleanLogInForm();
   modalAuth.classList.toggle('is-active');
+  loginInput.focus();
+}
+
+function closeModalAuth() {
+  if (event.target.className === modalAuth.className) {
+    modalAuth.classList.remove('is-active');
+  }
 }
 
 function authorized() {
-  console.log('Авторизован');
-
   function logOut() {
     login = null;
 
@@ -74,29 +90,33 @@ function authorized() {
   buttonOut.addEventListener('click', logOut);
 }
 
-function notAuthorized() {
-  console.log('Не авторизован');
+function maskInput(string) {
+  return string.trim();
+}
 
+function notAuthorized() {
   function logIn(event) {
     event.preventDefault();
 
-    login = loginInput.value;
-    if (login) {
+    loginInput.value = maskInput(loginInput.value);
+
+    if (loginInput.value) {
+      login = loginInput.value;
+
       localStorage.setItem('myDelivery', login);
 
       buttonAuth.removeEventListener('click', toggleModalAuth);
       closeAuth.removeEventListener('click', toggleModalAuth);
       buttonCancelAuth.removeEventListener('click', toggleModalAuth);
+      modalAuth.removeEventListener('click', closeModalAuth);
       logInForm.removeEventListener('submit', logIn);
 
       logInForm.reset();
-      loginInput.style.borderColor = '';
-      loginInput.placeholder = '';
 
       checkAuth();
       toggleModalAuth();
     } else {
-      loginInput.style.borderColor = 'red';
+      loginInput.style.borderColor = 'tomato';
       loginInput.placeholder = 'Обязательное поле!';
     }
   }
@@ -104,6 +124,7 @@ function notAuthorized() {
   buttonAuth.addEventListener('click', toggleModalAuth);
   closeAuth.addEventListener('click', toggleModalAuth);
   buttonCancelAuth.addEventListener('click', toggleModalAuth);
+  modalAuth.addEventListener('click', closeModalAuth);
   logInForm.addEventListener('submit', logIn);
 }
 
