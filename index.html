@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css" />
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Стили swiper.js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <!-- Нестандартные шрифты -->
     <link rel="stylesheet" href="css/fonts.css" />
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Общий контейнер -->
@@ -52,24 +54,73 @@
     <main class="main">
       <!-- Общий контейнер -->
       <div class="container">
-        <div class="container-promo">
-          <!-- Промоакция -->
-          <section class="promo">
-            <!-- Заголовок промоакции -->
-            <h1 class="promo__title">
-              Онлайн-сервис <br />
-              доставки еды на дом
-            </h1>
-            <!-- /.promo__title -->
-            <!-- Подзаголовок промоакции -->
-            <div class="promo__subtitle">
-              Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком
-            </div>
-            <!-- /.promo__subtitle -->
-          </section>
-          <!-- /.promo -->
+        <div class="promo-container swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Промоакция -->
+            <section class="promo promo_pizza swiper-slide">
+              <!-- Заголовок промоакции -->
+              <h2 class="promo__title">
+                Онлайн-сервис <br />
+                доставки еды на дом
+              </h2>
+              <!-- /.promo__title -->
+              <!-- Подзаголовок промоакции -->
+              <div class="promo__subtitle">
+                Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком
+              </div>
+              <!-- /.promo__subtitle -->
+            </section>
+            <!-- /.promo -->
+            <!-- Промоакция -->
+            <section class="promo promo_kebab swiper-slide">
+              <!-- Заголовок промоакции -->
+              <h2 class="promo__title">
+                Шашлыки на майские <br />
+                со скидкой 35%
+              </h2>
+              <!-- /.promo__title -->
+              <!-- Подзаголовок промоакции -->
+              <div class="promo__subtitle">
+                Закажите шашлыки в любом ресторане до 10 мая и получите скидку по промокоду OMAGAD
+              </div>
+              <!-- /.promo__subtitle -->
+            </section>
+            <!-- /.promo -->
+            <!-- Промоакция -->
+            <section class="promo promo_vegetables swiper-slide">
+              <!-- Заголовок промоакции -->
+              <h2 class="promo__title">
+                Скидка 20% на всю еду <br />
+                по промокоду LOVE.JS
+              </h2>
+              <!-- /.promo__title -->
+              <!-- Подзаголовок промоакции -->
+              <div class="promo__subtitle">
+                Блюдо из ресторана привезут вместе с двумя подарочными книгами по фронтенду
+              </div>
+              <!-- /.promo__subtitle -->
+            </section>
+            <!-- /.promo -->
+            <!-- Промоакция -->
+            <section class="promo promo_sushi swiper-slide">
+              <!-- Заголовок промоакции -->
+              <h2 class="promo__title">
+                Сеты со скидкой до 30% <br />
+                в ресторанах
+              </h2>
+              <!-- /.promo__title -->
+              <!-- Подзаголовок промоакции -->
+              <div class="promo__subtitle">
+                Скидки на сеты до 30 мая по промокоду DADADA
+              </div>
+              <!-- /.promo__subtitle -->
+            </section>
+            <!-- /.promo -->
+          </div>
+          <!-- /.swiper-wrapper -->
+          <div class="swiper-pagination"></div>
         </div>
-        <!-- /.container-promo -->
+        <!-- /.promo-container swiper-container -->
 
         <!-- Рестораны -->
         <section class="restaurants">
@@ -94,31 +145,7 @@
         <!-- Продукты -->
         <section class="products hide">
           <!-- Верхняя часть блока продуктов -->
-          <div class="restaurant__heading">
-            <!-- Заголовок ресторана -->
-            <h2 class="restaurant__title">
-              ТаНуки
-            </h2>
-            <!-- /.restaurant__title -->
-            <!-- Информация о ресторане -->
-            <div class="restaurant__card-info restaurant__card-info_margins">
-              <!-- Рейтинг ресторана -->
-              <div class="restaurant__card-rating restaurant__card-rating_basis_auto">
-                <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг" />
-                4.7
-              </div>
-              <!-- /.restaurant__card-rating restaurant__card-rating_basis_auto -->
-              <!-- Начальная цена в ресторане -->
-              <div class="restaurant__card-price restaurant__card-price_size_big">От 1 200 ₽</div>
-              <!-- /.restaurant__card-price restaurant__card-price_size_big -->
-              <!-- Категория ресторана -->
-              <div class="restaurant__card-category restaurant__card-category_size_big restaurant__card-category_long">
-                Суши, роллы, русская, кавказская, узбекская, туркменская, азербайджанская, иранская, армянская кухни
-              </div>
-              <!-- /.restaurant__card-category restaurant__card-category_size_big -->
-            </div>
-            <!-- /.product__card-info -->
-          </div>
+          <div class="restaurant__heading"></div>
           <!-- /.restaurant__heading -->
 
           <!-- Карточки продуктов -->
@@ -353,6 +380,7 @@
 
     <!-- Скрипт WOW.js -->
     <script src="js/wow.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <!-- Основной скрипт -->
     <script src="js/main.js"></script>
   </body>

@@ -11,23 +11,39 @@ const closeCart = document.querySelector('.modal-cart__close');
 // Кнопка "Отмена" закрытия модального окна "Корзина"
 const buttonCancelCart = document.querySelector('.button-cancel-cart');
 
-const buttonAuth = document.querySelector('.button-auth');
-const modalAuth = document.querySelector('.modal-auth');
-const closeAuth = document.querySelector('.modal-auth__close');
-const buttonCancelAuth = document.querySelector('.button-cancel-auth');
-const logInForm = document.querySelector('#logInForm');
-const loginInput = document.querySelector('#login');
-const userName = document.querySelector('.user-name');
-const buttonOut = document.querySelector('.button-out');
-const restaurantsCards = document.querySelector('.restaurants__cards');
-const containerPromo = document.querySelector('.container-promo');
-const restaunts = document.querySelector('.restaurants');
-const products = document.querySelector('.products');
-const headerLogo = document.querySelector('.header__logo');
-const productsCards = document.querySelector('.products__cards');
+const buttonAuth = document.querySelector('.button-auth'),
+  modalAuth = document.querySelector('.modal-auth'),
+  closeAuth = document.querySelector('.modal-auth__close'),
+  buttonCancelAuth = document.querySelector('.button-cancel-auth'),
+  logInForm = document.querySelector('#logInForm'),
+  loginInput = document.querySelector('#login'),
+  userName = document.querySelector('.user-name'),
+  buttonOut = document.querySelector('.button-out'),
+  restaurantsCards = document.querySelector('.restaurants__cards'),
+  promoContainer = document.querySelector('.promo-container'),
+  restaunts = document.querySelector('.restaurants'),
+  products = document.querySelector('.products'),
+  headerLogo = document.querySelector('.header__logo'),
+  restaurantHeading = document.querySelector('.restaurant__heading'),
+  productsCards = document.querySelector('.products__cards');
 
 let login = localStorage.getItem('myDelivery');
 console.log(login);
+
+const getData = async function (url) {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Ошибка по адресу: "${url}", статус ошибки: "${response.status}"`);
+  }
+
+  return await response.json();
+};
+
+const validLogin = function (str) {
+  const regName = /^[a-zA-Z][a-zA-Z0-9-_.]{2,20}$/;
+  return regName.test(str);
+};
 
 // Функция открытия и закрытия окна "Корзина"
 function toggleModalCart() {
@@ -73,6 +89,7 @@ function authorized() {
     localStorage.removeItem('myDelivery');
 
     checkAuth();
+    returnMain();
   }
 
   userName.textContent = login;
@@ -92,9 +109,9 @@ function notAuthorized() {
   function logIn(event) {
     event.preventDefault();
 
-    loginInput.value = maskInput(loginInput.value);
+    // loginInput.value = maskInput(loginInput.value);
 
-    if (loginInput.value) {
+    if (validLogin(loginInput.value)) {
       login = loginInput.value;
 
       localStorage.setItem('myDelivery', login);
@@ -130,23 +147,25 @@ function checkAuth() {
   }
 }
 
-function createRestaurantCard() {
+function createRestaurantCard(restaurant) {
+  const { name, image, time_of_delivery: timeOfDelivery, stars, price, kitchen, products } = restaurant;
+
   const card = `
-    <a class="restaurant__card wow fadeInUp" data-wow-delay="0.2s" href="#">
+    <a class="restaurant__card wow fadeInUp" data-name="${name}" data-products="${products}" data-wow-delay="0.2s" href="#">
       <!-- Фотография карточки -->
-      <img class="restaurant__card-img" src="img/pizza-plus-plus.jpg" alt="Пицца Плюс" />
+      <img class="restaurant__card-img" src="${image}" alt="${name}" />
       <!-- Текстовая часть карточки -->
       <div class="restaurant__card-text">
         <!-- Верхняя часть текстовой части карточки -->
         <div class="restaurant__card-heading">
           <!-- Заголовок карточки -->
           <h3 class="restaurant__card-title">
-            Пицца++
+            ${name}
           </h3>
           <!-- /.restaurant__card-title -->
           <!-- Тег или среднее время ожидания заказа -->
           <div class="restaurant__card-tag">
-            50 мин
+            ${timeOfDelivery} мин
           </div>
           <!-- /.restaurant__card-tag -->
         </div>
@@ -156,15 +175,15 @@ function createRestaurantCard() {
           <!-- Рейтинг в карточке -->
           <div class="restaurant__card-rating">
             <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг" />
-            4.5
+            ${stars}
           </div>
           <!-- /.restaurant__card-rating -->
           <!-- Цена в карточке -->
-          <div class="restaurant__card-price">От 900 ₽</div>
+          <div class="restaurant__card-price">От ${price} ₽</div>
           <!-- /.restaurant__card-price -->
           <!-- Категория в карточке-->
           <div class="restaurant__card-category">
-            Пицца
+            ${kitchen}
           </div>
           <!-- /.restaurant__card-category -->
         </div>
@@ -178,23 +197,56 @@ function createRestaurantCard() {
   restaurantsCards.insertAdjacentHTML('beforeend', card);
 }
 
-function createProductCard() {
+function createRestaurantHeading({ name, stars, price, kitchen }) {
+  const heading = `
+    <!-- Заголовок ресторана -->
+    <h2 class="restaurant__title">
+      ${name}
+    </h2>
+    <!-- /.restaurant__title -->
+    <!-- Информация о ресторане -->
+    <div class="restaurant__card-info restaurant__card-info_margins">
+      <!-- Рейтинг ресторана -->
+      <div class="restaurant__card-rating restaurant__card-rating_basis_auto">
+        <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг" />
+      ${stars}
+      </div>
+      <!-- /.restaurant__card-rating restaurant__card-rating_basis_auto -->
+      <!-- Начальная цена в ресторане -->
+      <div class="restaurant__card-price restaurant__card-price_size_big">${price}</div>
+      <!-- /.restaurant__card-price restaurant__card-price_size_big -->
+      <!-- Категория ресторана -->
+      <div class="restaurant__card-category restaurant__card-category_size_big restaurant__card-category_long">
+        ${kitchen}
+      </div>
+      <!-- /.restaurant__card-category restaurant__card-category_size_big -->
+    </div>
+    <!-- /.product__card-info -->
+  `;
+
+  restaurantHeading.insertAdjacentHTML('afterbegin', heading);
+}
+
+function createProductCard({ id, name, image, description, price }) {
   const card = document.createElement('div');
   card.className = 'product__card wow fadeInUp';
+  // card.attributes.setNamedItem('dataWowDelay', '0.2s');
   // card.dataWowDelay = '0.2s';
+
+  // const { id, name, image, description, price } = product;
 
   card.insertAdjacentHTML(
     'beforeend',
     `
     <!-- Изображение карточки -->
-    <img class="product__card-img" src="img/eel-fish.jpg" alt="Угорь" />
+    <img class="product__card-img" src="${image}" alt="${name}" />
     <!-- Текст карточки -->
     <div class="product__card-text">
       <!-- Верхняя часть карточки -->
       <div class="product__card-heading">
         <!-- Заголовок карточки -->
         <h3 class="product__card-title">
-          Ролл Угорь стандарт
+          ${name}
         </h3>
         <!-- /.product__card-title -->
       </div>
@@ -203,7 +255,7 @@ function createProductCard() {
       <div class="product__card-info">
         <!-- Ингредиенты в карточке -->
         <div class="product__card-ingredients">
-          Рис, угорь, соус унаги, кунжут, водоросли нори.
+          ${description}
         </div>
         <!-- /.product__card-ingredients -->
       </div>
@@ -217,7 +269,7 @@ function createProductCard() {
         </button>
         <!-- /.button button-primary -->
         <!-- Цена в карточке -->
-        <span class="product__card-price">250 ₽</span>
+        <span class="product__card-price">${price} ₽</span>
       </div>
       <!-- /.product__card-buttons -->
     </div>
@@ -236,46 +288,78 @@ function openProducts(event) {
 
   if (restaurant) {
     if (login) {
+      restaurantHeading.textContent = '';
       productsCards.textContent = '';
 
-      containerPromo.classList.add('hide');
+      promoContainer.classList.add('hide');
       restaunts.classList.add('hide');
       products.classList.remove('hide');
 
-      createProductCard();
-      createProductCard();
-      createProductCard();
+      const restaurantObject = {
+        name: restaurant.dataset.name,
+        stars: restaurant.querySelector('.restaurant__card-rating').textContent.trim(),
+        price: restaurant.querySelector('.restaurant__card-price').textContent.trim(),
+        kitchen: restaurant.querySelector('.restaurant__card-category').textContent.trim(),
+      };
+
+      createRestaurantHeading(restaurantObject);
+
+      getData(`./db/${restaurant.dataset.products}`).then(function (data) {
+        data.forEach(createProductCard);
+      });
     } else {
       toggleModalAuth();
     }
   }
 }
 
-// Окрытие модального окна "Корзина"
-buttonCart.addEventListener('click', toggleModalCart);
-
-// Закрытие модального окна "Корзина"
-// С помощью кнопки "Х"
-closeCart.addEventListener('click', toggleModalCart);
-// С помощью кнопки "Отмена"
-buttonCancelCart.addEventListener('click', toggleModalCart);
-// С помощью клика на подложку
-modalCart.addEventListener('click', closeModalCart);
-
-restaurantsCards.addEventListener('click', openProducts);
-headerLogo.addEventListener('click', function (event) {
+function returnMain() {
   event.preventDefault();
 
-  containerPromo.classList.remove('hide');
+  promoContainer.classList.remove('hide');
   restaunts.classList.remove('hide');
   products.classList.add('hide');
-});
+}
 
-checkAuth();
+function init() {
+  getData('./db/partners.json').then(function (data) {
+    data.forEach(createRestaurantCard);
+  });
 
-createRestaurantCard();
-createRestaurantCard();
-createRestaurantCard();
+  // Окрытие модального окна "Корзина"
+  buttonCart.addEventListener('click', toggleModalCart);
+  // Вариант с передачей конкретного элемента
+  // buttonCart.addEventListener('click', toggleModal.bind(null, modalCart));
 
-// Инициализация WOW.js
-new WOW().init();
+  // Закрытие модального окна "Корзина"
+  // С помощью кнопки "Х"
+  closeCart.addEventListener('click', toggleModalCart);
+  // С помощью кнопки "Отмена"
+  buttonCancelCart.addEventListener('click', toggleModalCart);
+  // С помощью клика на подложку
+  modalCart.addEventListener('click', closeModalCart);
+
+  restaurantsCards.addEventListener('click', openProducts);
+
+  headerLogo.addEventListener('click', returnMain);
+
+  checkAuth();
+
+  new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 1,
+    speed: 800,
+    autoplay: {
+      delay: 4000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  // Инициализация WOW.js
+  new WOW().init();
+}
+
+init();
