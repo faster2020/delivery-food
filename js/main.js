@@ -322,7 +322,7 @@ function returnMain() {
 }
 
 function init() {
-  getData(`./db/partners.json`).then(function (data) {
+  getData('./db/partners.json').then(function (data) {
     data.forEach(createRestaurantCard);
   });
 
