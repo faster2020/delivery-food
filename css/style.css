@@ -100,8 +100,6 @@ button {
 /* Иконка в кнопке */
 .button__icon {
   margin-right: 5px;
-  width: 14px;
-  height: 14px;
 }
 
 /* Иконка справа */
