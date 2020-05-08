@@ -27,6 +27,12 @@
         <!-- Кнопки -->
         <div class="buttons">
           <span class="user-name"></span>
+          <!-- Кнопка "Корзина" -->
+          <button class="button button-cart">
+            <img class="button__icon" src="img/shopping-cart.svg" alt="Корзина" />
+            <span class="button__text">Корзина</span>
+          </button>
+          <!-- /.button -->
           <!-- Кнопка "Войти" -->
           <button class="button button-primary button-auth">
             <img class="button__icon" src="img/user.svg" alt="Пользователь" />
@@ -37,12 +43,6 @@
             <span class="button__text">Выйти</span>
           </button>
           <!-- /.button button-primary -->
-          <!-- Кнопка "Корзина" -->
-          <button class="button button-cart">
-            <img class="button__icon" src="img/shopping-cart.svg" alt="Корзина" />
-            <span class="button__text">Корзина</span>
-          </button>
-          <!-- /.button -->
         </div>
         <!-- /.buttons -->
       </header>
@@ -145,7 +145,31 @@
         <!-- Продукты -->
         <section class="products hide">
           <!-- Верхняя часть блока продуктов -->
-          <div class="restaurant__heading"></div>
+          <div class="restaurant__heading">
+            <!-- Заголовок ресторана -->
+            <h2 class="restaurant__title">
+              ТаНуки
+            </h2>
+            <!-- /.restaurant__title -->
+            <!-- Информация о ресторане -->
+            <div class="restaurant__card-info restaurant__card-info_margins">
+              <!-- Рейтинг ресторана -->
+              <div class="restaurant__card-rating restaurant__card-rating_basis_auto">
+                <img class="restaurant__icon" src="img/rating.svg" alt="Рейтинг" />
+                4.7
+              </div>
+              <!-- /.restaurant__card-rating restaurant__card-rating_basis_auto -->
+              <!-- Начальная цена в ресторане -->
+              <div class="restaurant__card-price restaurant__card-price_size_big">От 1 200 ₽</div>
+              <!-- /.restaurant__card-price restaurant__card-price_size_big -->
+              <!-- Категория ресторана -->
+              <div class="restaurant__card-category restaurant__card-category_size_big restaurant__card-category_long">
+                Суши, роллы, русская, кавказская, узбекская, туркменская, азербайджанская, иранская, армянская кухни
+              </div>
+              <!-- /.restaurant__card-category restaurant__card-category_size_big -->
+            </div>
+            <!-- /.product__card-info -->
+          </div>
           <!-- /.restaurant__heading -->
 
           <!-- Карточки продуктов -->
@@ -200,125 +224,31 @@
           </h3>
           <!-- /.modal__title -->
           <!-- Кнопка закрытия окна -->
-          <button class="modal-cart__close">
+          <button class="modal__close modal-cart__close">
             &times;
           </button>
           <!-- /.modal__close -->
         </div>
         <!-- /.modal__header -->
         <!-- Тело окна -->
-        <div class="modal__body">
+        <div class="modal__body modal-cart__body">
+          <div class="cart-is-clear hide">Ваша корзина пока пуста</div>
           <!-- Строки продуктов -->
-          <div class="products__rows">
-            <!-- Строка продукта -->
-            <div class="product__row">
-              <!-- Заголовок продукта -->
-              <span class="product__row-title">Ролл угорь стандарт</span>
-              <!-- Цена продукта -->
-              <strong class="product__row-price">250 ₽</strong>
-              <!-- Блок счётчика -->
-              <div class="product__row-counter-block">
-                <!-- Кнопка "-" -->
-                <button class="product__row-button">-</button>
-                <!-- Счётчик -->
-                <span class="product__row-counter">1</span>
-                <!-- Кнопка "+" -->
-                <button class="product__row-button">+</button>
-              </div>
-              <!-- /.product__row-counter-block -->
-            </div>
-            <!-- /.product__row -->
-
-            <!-- Строка продукта -->
-            <div class="product__row">
-              <!-- Заголовок продукта -->
-              <span class="product__row-title">Ролл угорь стандарт</span>
-              <!-- Цена продукта -->
-              <strong class="product__row-price">250 ₽</strong>
-              <!-- Блок счётчика -->
-              <div class="product__row-counter-block">
-                <!-- Кнопка "-" -->
-                <button class="product__row-button">-</button>
-                <!-- Счётчик -->
-                <span class="product__row-counter">1</span>
-                <!-- Кнопка "+" -->
-                <button class="product__row-button">+</button>
-              </div>
-              <!-- /.product__row-counter-block -->
-            </div>
-            <!-- /.product__row -->
-
-            <!-- Строка продукта -->
-            <div class="product__row">
-              <!-- Заголовок продукта -->
-              <span class="product__row-title">Ролл угорь стандарт</span>
-              <!-- Цена продукта -->
-              <strong class="product__row-price">250 ₽</strong>
-              <!-- Блок счётчика -->
-              <div class="product__row-counter-block">
-                <!-- Кнопка "-" -->
-                <button class="product__row-button">-</button>
-                <!-- Счётчик -->
-                <span class="product__row-counter">1</span>
-                <!-- Кнопка "+" -->
-                <button class="product__row-button">+</button>
-              </div>
-              <!-- /.product__row-counter-block -->
-            </div>
-            <!-- /.product__row -->
-
-            <!-- Строка продукта -->
-            <div class="product__row">
-              <!-- Заголовок продукта -->
-              <span class="product__row-title">Ролл угорь стандарт</span>
-              <!-- Цена продукта -->
-              <strong class="product__row-price">250 ₽</strong>
-              <!-- Блок счётчика -->
-              <div class="product__row-counter-block">
-                <!-- Кнопка "-" -->
-                <button class="product__row-button">-</button>
-                <!-- Счётчик -->
-                <span class="product__row-counter">1</span>
-                <!-- Кнопка "+" -->
-                <button class="product__row-button">+</button>
-              </div>
-              <!-- /.product__row-counter-block -->
-            </div>
-            <!-- /.product__row -->
-
-            <!-- Строка продукта -->
-            <div class="product__row">
-              <!-- Заголовок продукта -->
-              <span class="product__row-title">Ролл угорь стандарт</span>
-              <!-- Цена продукта -->
-              <strong class="product__row-price">250 ₽</strong>
-              <!-- Блок счётчика -->
-              <div class="product__row-counter-block">
-                <!-- Кнопка "-" -->
-                <button class="product__row-button">-</button>
-                <!-- Счётчик -->
-                <span class="product__row-counter">1</span>
-                <!-- Кнопка "+" -->
-                <button class="product__row-button">+</button>
-              </div>
-              <!-- /.product__row-counter-block -->
-            </div>
-            <!-- /.product__row -->
-          </div>
+          <div class="products__rows"></div>
           <!-- /.products__rows -->
         </div>
         <!-- /.modal__body -->
 
         <!-- Нижняя часть окна -->
-        <div class="modal__footer">
+        <div class="modal__footer modal-cart__footer">
           <!-- Сумма заказа -->
-          <span class="modal-footer__price-tag">1250 ₽</span>
+          <span class="modal-footer__price-tag modal-cart-footer__price-tag">1250 ₽</span>
           <!-- Кнопки нижней части окна -->
           <div class="modal-footer__buttons">
             <!-- Кнопка "Оформить заказ" -->
             <button class="button button-primary">Оформить заказ</button>
             <!-- Кнопка "Отмена" -->
-            <button class="button button-cancel-cart">Отмена</button>
+            <button class="button button-clear-cart">Очистить корзину</button>
           </div>
           <!-- /.modal-footer__buttons -->
         </div>
@@ -334,7 +264,7 @@
           <div class="modal__title">
             Авторизация
           </div>
-          <button class="modal-auth__close">
+          <button class="modal__close modal-auth__close">
             &times;
           </button>
           <!-- /.modal__close -->

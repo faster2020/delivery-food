@@ -511,7 +511,7 @@ button {
 }
 
 /* Кнопка закрытия "Х" модального окна */
-.modal-auth__close {
+.modal__close {
   font-size: 36px;
   background-color: transparent;
   border: none;
@@ -550,6 +550,7 @@ button {
 }
 
 .button-cart {
+  margin-right: 10px;
   display: none;
 }
 
@@ -563,6 +564,15 @@ button {
 
 .button-out {
   display: none;
+}
+
+.cart-is-clear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 52px;
+  font-size: 30px;
+  margin: auto;
 }
 
 .hide {
